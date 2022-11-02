@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize" Icon="/lowbudgetlab.png" FontFamily="Txt">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="450">
+        <Grid.Background>
+            <ImageBrush TileMode="Tile" ImageSource="/appbackground.png"/>
+        </Grid.Background>
+        <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="90,90,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF00FF19" FontFamily="Txt"/>
+        <TextBox x:Name="textBox_username" HorizontalAlignment="Left" Margin="215,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20" Background="{x:Null}" Foreground="#FF00FF03" BorderBrush="Lime" MaxLength="15" IsUndoEnabled="False" Cursor="Pen" Height="32" MaxLines="1" FontStretch="Medium" FontFamily="Txt"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="90,160,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="Lime" FontSize="16" FontWeight="Bold" FontFamily="Txt"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="215,160,0,0" VerticalAlignment="Top" Width="170" Height="32" Background="{x:Null}" Foreground="Lime" BorderBrush="Lime" FontSize="20" FontWeight="Bold" Cursor="Arrow" FontFamily="Txt"/>
+        <Button x:Name="button_login"
+        Background="{x:Null}" BorderBrush="Lime" Foreground="#FF00FE00" Margin="251,225,0,0" FontSize="16" Click="button_login_Click" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="98" RenderTransformOrigin="0.5,0.5" FontWeight="Black" FontFamily="Txt">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" 
+                    Value="20"/>
+                </Style>
+            </Button.Resources>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Image x:Name="___lowbudgetlab_png" Margin="10,10,752,402" Source="/lowbudgetlab.png" Stretch="Fill"/>
+        <Image x:Name="___button_close_png" Margin="726,10,0,376" Source="/button_close.png" Stretch="Fill" HorizontalAlignment="Left" Width="64"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="726,10,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="64" Height="64" Click="button_Click_2" ClickMode="Press">
+            <Button.Background>
+                <ImageBrush ImageSource="/button_close_login.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

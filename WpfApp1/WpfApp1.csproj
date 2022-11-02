@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+    <Page Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appbackground.png" />
+    <None Remove="button_close_login.png" />
+    <None Remove="button_close_register.png" />
+    <None Remove="Fonts\8514oem.fon" />
+    <None Remove="lowbudgetlab.png" />
+    <None Remove="wong.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="appbackground.png" />
+    <Resource Include="button_close_login.png" />
+    <Resource Include="button_close_register.png" />
+    <Resource Include="Fonts\8514oem.fon">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="lowbudgetlab.png" />
+    <Resource Include="wong.png" />
+  </ItemGroup>
+
+</Project>
